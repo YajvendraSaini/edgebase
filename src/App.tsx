@@ -1,10 +1,9 @@
 import { VideoBackground } from './components/VideoBackground'
 import { Navigation } from './components/Navigation'
 import { HeroSection } from './components/HeroSection'
-import { ManifestoSection } from './components/ManifestoSection'
-import { NightPartySection } from './components/NightPartySection'
-import { WhoItsForSection } from './components/WhoItsForSection'
+import { EthosSection } from './components/EthosSection'
 import { TheHouseSection } from './components/TheHouseSection'
+import { NightPartySection } from './components/NightPartySection'
 import { ApplySection } from './components/ApplySection'
 import { Footer } from './components/Footer'
 
@@ -17,10 +16,9 @@ function App() {
         <HeroSection />
       </div>
 
-      <ManifestoSection />
-      <NightPartySection />
-      <WhoItsForSection />
+      <EthosSection />
       <TheHouseSection />
+      <NightPartySection />
       <ApplySection />
       <Footer />
     </div>

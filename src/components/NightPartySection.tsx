@@ -1,87 +1,58 @@
-const timeline = [
-  {
-    time: '8:00 PM',
-    title: 'Doors open',
-    description: 'Chai, introductions, no agenda yet',
-  },
-  {
-    time: '9:00 PM',
-    title: '60-second pitches',
-    description:
-      'Anyone with an idea stands up. One minute. Then people pick what to build',
-  },
-  {
-    time: '9:30 PM',
-    title: 'Build starts',
-    description: 'Teams form or you go solo. The room goes quiet',
-  },
-  {
-    time: '1:00 AM',
-    title: 'Midnight checkpoint',
-    description:
-      'Two sentences each: where are you. Not a demo. Just pulse',
-  },
-  {
-    time: '5:00 AM',
-    title: 'Final push',
-    description: 'Two hours left. Cut scope, not quality',
-  },
-  {
-    time: '7:00 AM',
-    title: 'Demo morning',
-    description:
-      '5 minutes each. Show what runs. Kachori and paratha. Sun is up',
-  },
-]
+import night0Image from '../assets/night0.png'
 
 export function NightPartySection() {
   return (
-    <section id="the-night" className="relative z-10 border-t border-[#E5E5E5] bg-[#FFFFFF] px-6 py-24 md:py-32">
-      <div className="mx-auto max-w-7xl">
-        <p className="text-[11px] uppercase tracking-[0.2em] text-[#000000]">
-          First Event
-        </p>
-
-        <h2
-          className="mt-4 font-display text-[44px] text-[#000000]"
-          style={{ lineHeight: 1.05, letterSpacing: '-1.5px' }}
-        >
-          Night Party.
-        </h2>
-
-        <p className="mt-4 text-lg italic text-[#6F6F6F]">
-          8pm to sunrise. 12 builders. One room. Something ships.
-        </p>
-
-        <div className="mt-10 max-w-[560px] space-y-6 text-base leading-[1.8] text-[#6F6F6F]">
-          <p>
-            Before the residency, before the house, before all of it — there&apos;s
-            one night. Night Party is how Edge Base begins. You come with an idea.
-            You find people who get it. You build until the sun comes up. At 7am
-            you demo what you made — not a slide, not a plan — something that
-            runs.
+    <section id="night-0" className="relative z-10 border-t border-[#E5E5E5] bg-[#FFFFFF] px-6 py-24 md:py-32">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <p className="text-[11px] uppercase tracking-[0.2em] text-[#000000]">
+            The Initiation
           </p>
-          <p>
-            This is Night Zero. If the vibe at 3am is right, we know the house
-            works.
+
+          <h2
+            className="mt-4 font-display text-[44px] text-[#000000]"
+            style={{ lineHeight: 1.05, letterSpacing: '-1.5px' }}
+          >
+            Night 0.
+          </h2>
+
+          <p className="mt-4 text-lg italic text-[#6F6F6F]">
+            12 outliers. Extreme focus. Undeniable outcomes.
           </p>
+
+          <div className="mt-10 space-y-6 text-base leading-[1.8] text-[#6F6F6F]">
+            <p>
+              Night 0 isn&apos;t a hackathon; it&apos;s an audit of your execution
+              speed. You bring an idea, a stalled project, or a broken product. You
+              sit shoulder-to-shoulder with the 1% of Jaipur&apos;s builders and
+              founders.
+            </p>
+            <p>
+              We remove the friction and supply the high-density environment. When
+              your screen blurs and your energy crashes deep into the night, premium
+              food drops in to keep the momentum brutal and unbroken. By sunrise,
+              you don&apos;t leave with a slide deck or a participation certificate.
+              You leave having achieved a month&apos;s worth of progress in a single
+              session. You leave with an outcome.
+            </p>
+          </div>
+
+          <a
+            href="#apply"
+            className="mt-10 inline-block rounded-full bg-[#000000] px-8 py-3.5 text-sm text-[#FFFFFF] transition-transform hover:scale-[1.03]"
+          >
+            Apply Now
+          </a>
         </div>
 
-        <div className="relative mt-16 max-w-xl border-l border-[#E5E5E5] pl-8">
-          {timeline.map((entry) => (
-            <div key={entry.time} className="relative pb-10 last:pb-0">
-              <span className="absolute -left-[33px] top-1.5 h-2 w-2 rounded-full bg-[#000000]" />
-              <p className="font-display text-[15px] text-[#000000]">
-                {entry.time}
-              </p>
-              <p className="mt-1 text-sm font-medium text-[#000000]">
-                {entry.title}
-              </p>
-              <p className="mt-1 text-[13px] text-[#6F6F6F]">
-                {entry.description}
-              </p>
-            </div>
-          ))}
+        <div className="relative mx-auto w-[49%] lg:justify-self-center">
+          <div className="overflow-hidden border border-[#E5E5E5] shadow-[0_8px_40px_rgba(0,0,0,0.08)]">
+            <img
+              src={night0Image}
+              alt="Edge Base Night 0 — apply for the initiation"
+              className="h-auto w-full"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 
 const menuItems = [
-  { label: 'About', href: '#about', id: 'about' },
-  { label: 'The Night', href: '#the-night', id: 'the-night' },
-  { label: 'Apply', href: '#apply', id: 'apply' },
+  { label: 'Ethos', href: '#ethos', id: 'ethos' },
+  { label: 'The Residency', href: '#the-residency', id: 'the-residency' },
+  { label: 'Night 0', href: '#night-0', id: 'night-0' },
 ]
 
 export function Navigation() {
@@ -15,7 +15,7 @@ export function Navigation() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 80)
 
-      const sections = ['about', 'the-night', 'who-its-for', 'the-house', 'apply']
+      const sections = ['ethos', 'the-residency', 'night-0', 'apply']
       const scrollPos = window.scrollY + 120
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -77,7 +77,7 @@ export function Navigation() {
             href="#apply"
             className="hidden rounded-full bg-[#000000] px-6 py-2.5 text-sm text-[#FFFFFF] transition-transform hover:scale-[1.03] md:inline-block"
           >
-            Apply Now
+            Apply for Night 0
           </a>
 
           <button
@@ -128,7 +128,7 @@ export function Navigation() {
             className="mt-auto rounded-full bg-[#000000] px-6 py-4 text-center text-sm text-[#FFFFFF] transition-transform hover:scale-[1.03]"
             onClick={() => setMenuOpen(false)}
           >
-            Apply Now
+            Apply for Night 0
           </a>
         </div>
       )}

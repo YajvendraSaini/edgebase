@@ -18,64 +18,79 @@ export function ApplySection() {
           className="font-display text-4xl text-[#000000] md:text-[40px]"
           style={{ lineHeight: 1.05, letterSpacing: '-1.5px' }}
         >
-          Apply for Night Party.
+          Apply for Night 0.
         </h2>
 
         <p className="mt-4 text-base text-[#6F6F6F]">
-          12 seats. First come, right fit. No applications after the room is
-          full.
+          12 spots. First come, right fit. If the room fills, you wait for the
+          next one.
         </p>
 
         <div className="mt-12 rounded-2xl border border-[#E5E5E5] bg-[#FFFFFF] p-8 shadow-[0_2px_24px_rgba(0,0,0,0.06)] md:p-10">
           {submitted ? (
             <p className="font-display text-2xl italic text-[#000000]">
-              You&apos;re in. We&apos;ll be in touch before the night.
+              Received. If you&apos;re the right fit, we&apos;ll ping you before
+              the night.
             </p>
           ) : (
             <form className="space-y-5 text-left" onSubmit={handleSubmit}>
               <Field label="Name" name="name" type="text" required />
               <Field label="Email" name="email" type="email" required />
               <Field
+                label="Phone Number"
+                name="phone"
+                type="tel"
+                placeholder="So we can pull you off the waitlist fast"
+                required
+              />
+              <Field
                 label="City"
                 name="city"
                 type="text"
-                placeholder="Jaipur? Somewhere else?"
+                placeholder="Jaipur? SF? BLR?"
                 required
               />
               <Field
-                label="What are you building right now"
+                label="What are you building right now?"
                 name="building"
                 as="textarea"
                 rows={4}
+                placeholder="Explain the core mechanism in one sentence. Links to live betas, Figma files, or repos preferred."
                 required
               />
               <Field
-                label="Why Night Party"
+                label="Why are you sacrificing a night of sleep for this?"
                 name="why"
                 as="textarea"
                 rows={3}
                 required
               />
               <Field
-                label="Twitter / X handle"
-                name="twitter"
-                type="text"
-                placeholder="Optional"
+                label="What is a deeply held belief you have about tech, design, or startups that most people disagree with?"
+                name="belief"
+                as="textarea"
+                rows={3}
+                required
               />
+              <Field
+                label="Twitter / Github / Portfolio"
+                name="links"
+                type="text"
+              />
+
+              <p className="text-center text-xs text-[#6F6F6F]">
+                We respect builder privacy. Zero spam.
+              </p>
 
               <button
                 type="submit"
                 className="mt-2 h-12 w-full rounded-lg bg-[#000000] text-[15px] font-medium text-[#FFFFFF] transition-[transform,opacity] hover:scale-[0.98] hover:opacity-90"
               >
-                Submit Application
+                Submit Protocol
               </button>
             </form>
           )}
         </div>
-
-        <p className="mt-6 text-xs text-[#6F6F6F]">
-          Edge Base does not share your information with anyone.
-        </p>
       </div>
     </section>
   )

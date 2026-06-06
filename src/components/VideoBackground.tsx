@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 const VIDEO_URL =
   'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_083109_283f3553-e28f-428b-a723-d639c617eb2b.mp4'
 
-const FADE_DURATION = 0.5
+const FADE_DURATION = 0.15
 
 export function VideoBackground() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -33,11 +33,8 @@ export function VideoBackground() {
     }
 
     const handleEnded = () => {
-      video.style.opacity = '0'
-      window.setTimeout(() => {
-        video.currentTime = 0
-        void video.play()
-      }, 100)
+      video.currentTime = 0
+      void video.play()
     }
 
     void video.play()
@@ -51,10 +48,7 @@ export function VideoBackground() {
   }, [])
 
   return (
-    <div
-      className="pointer-events-none absolute z-0"
-      style={{ top: '300px', inset: 'auto 0 0 0' }}
-    >
+    <div className="pointer-events-none absolute inset-0 z-0">
       <video
         ref={videoRef}
         className="h-full w-full object-cover"
@@ -63,7 +57,6 @@ export function VideoBackground() {
         muted
         playsInline
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
     </div>
   )
 }
