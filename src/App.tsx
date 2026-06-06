@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { VideoBackground } from './components/VideoBackground'
 import { Navigation } from './components/Navigation'
 import { HeroSection } from './components/HeroSection'
@@ -21,6 +22,7 @@ function App() {
       <NightPartySection />
       <ApplySection />
       <Footer />
+      <Analytics />
     </div>
   )
 }
