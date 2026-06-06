@@ -66,13 +66,6 @@ export function ApplySection() {
                 required
               />
               <Field
-                label="What is a deeply held belief you have about tech, design, or startups that most people disagree with?"
-                name="belief"
-                as="textarea"
-                rows={3}
-                required
-              />
-              <Field
                 label="Twitter / Github / Portfolio"
                 name="links"
                 type="text"
@@ -86,7 +79,7 @@ export function ApplySection() {
                 type="submit"
                 className="mt-2 h-12 w-full rounded-lg bg-[#000000] text-[15px] font-medium text-[#FFFFFF] transition-[transform,opacity] hover:scale-[0.98] hover:opacity-90"
               >
-                Submit Protocol
+                Submit & Claim 1 of 12 Spots
               </button>
             </form>
           )}
